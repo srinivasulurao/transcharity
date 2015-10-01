@@ -1,0 +1,72 @@
+form#javo_ts_form{}
+
+form#javo_ts_form .javo_ts_tab.javo-opts-group-tab h3{ font-size:1.0em; }
+
+form#javo_ts_form .javo_ts_tab.javo-opts-group-tab dl{
+	display:block;
+	box-shadow:0 1px 0px rgba( 215, 215, 215, 0.13 );
+}
+
+form#javo_ts_form .javo_ts_tab.javo-opts-group-tab dl.hidden{ display:none; }
+
+form#javo_ts_form .javo_ts_tab.javo-opts-group-tab dt{
+	display:inline-block;
+	width:20%;
+	text-align:right;
+	text-transform:uppercase;
+	vertical-align:middle;
+}
+
+form#javo_ts_form .javo_ts_tab.javo-opts-group-tab dt:after{
+	content: ">";
+	display:inline-block;
+	font-size:0.8em;
+	font-weight:bold;
+	margin-left:10px;
+	font-family:Impact, Charcoal, sans-serif;
+	font-weight:bold;
+
+}
+form#javo_ts_form .javo_ts_tab.javo-opts-group-tab dd{
+	display:inline-block;
+	vertical-align:middle;
+}
+form#javo_ts_form .javo_ts_tab.javo-opts-group-tab div.description:before{
+	display:block;
+	font-style:normal;
+	font-family:"dashicons";
+	content:"\f147";
+	font-weight:bold;
+	font-size:10pt;
+	color:#999;
+}
+
+form#javo_ts_form .javo_ts_tab.javo-opts-group-tab div.description{
+	font-style:italic;
+	font-family: sans-serif;
+	font-size:10pt;
+	color:#aaa;
+	word-break:break-word;
+	max-width:500px;
+}
+
+form#javo_ts_form .javo_ts_tab.javo-opts-group-tab[tar="priceplan"] input[name^='javo_ts']{
+	box-shadow:inset 2px 2px 2px rgba(230, 230, 230, .5);
+	text-align:center;
+}
+
+form#javo_ts_form .javo_ts_tab.javo-opts-group-tab .postbox h3 label [type="checkbox"]:checked:before{
+	content:"\f158";
+}
+
+@media( max-width:768px ){
+	form#javo_ts_form .javo_ts_tab.javo-opts-group-tab dt{ width:100%; text-align:inherit; }
+	form#javo_ts_form .javo_ts_tab.javo-opts-group-tab dt:before{ content:none; }
+	form#javo_ts_form .javo_ts_tab.javo-opts-group-tab dd{ display:block; }
+
+
+}
+
+.updated.green-bg{ background: #E9F9DD; }
+
+

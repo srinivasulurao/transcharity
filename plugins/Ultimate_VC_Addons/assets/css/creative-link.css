@@ -1,0 +1,682 @@
+
+*, *:after, *::before {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+.main_cl {
+margin: 0 auto;
+
+text-align: center;
+}
+.cr_link a {
+position: relative;
+display: inline-block;
+margin: 15px 25px;
+outline: none;
+color: #000000;
+text-decoration: none;
+text-transform: capitalize;
+letter-spacing: 1px;
+font-weight: inherit;
+/*text-shadow: 0 0 1px rgba(255,255,255,0.3);*/
+font-size: 1.35em;
+
+}
+
+.cr_link a:hover, .cr_link a:focus {
+outline: none;
+}
+
+
+/*---------------- Effect 1: Brackets ----------- */
+.cl-effect-1 a {
+	margin:0px;
+}
+.cl-effect-1 a::before,
+.cl-effect-1 a::after {
+	display: inline-block;
+	opacity: 0;
+	font-size:inherit;
+	line-height:1em;
+
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+	transition: transform 0.3s, opacity 0.2s;
+}
+
+.cl-effect-1 .btn10_span{
+		-webkit-transition: all ease 0.3s;
+		-moz-transition: all ease 0.3s;
+		transition: all ease 0.3s;
+
+	/*-webkit-transition: -webkit-transform 0.3s ease-in, opacity 0.2s ease-in;;
+	-moz-transition: -moz-transform 0.3s ease-in, opacity 0.2s ease-in;
+	transition: transform 0.3s ease-in, opacity 0.2s ease-in;*/
+}
+.cl-effect-1 a::before {
+	margin-right: 10px;
+	content: '[';
+	-webkit-transform: translateX(20px);
+	-moz-transform: translateX(20px);
+	transform: translateX(20px);
+
+}
+
+.cl-effect-1 a::after {
+	margin-left: 10px;
+	content: ']';
+	-webkit-transform: translateX(-20px);
+	-moz-transform: translateX(-20px);
+	transform: translateX(-20px);
+}
+
+.cl-effect-1 a:hover::before,
+.cl-effect-1 a:hover::after,
+.cl-effect-1 a:focus::before,
+.cl-effect-1 a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	transform: translateX(0px);
+}
+
+/*----- Effect 2: 3D rolling links ------*/
+
+.cl-effect-2 a {
+	line-height: 44px;
+	-webkit-perspective: 1000px;
+	-moz-perspective: 1000px;
+	perspective: 1000px;
+	margin:0;
+}
+
+.cl-effect-2 a span {
+	position: relative;
+	display: inline-block;
+	/*padding: 0 14px;*/
+	padding: 14px;
+	background: inherit;
+	-webkit-transition: -webkit-transform 0.3s;
+	-moz-transition: -moz-transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-transform-origin: 50% 0;
+	-moz-transform-origin: 50% 0;
+	transform-origin: 50% 0;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.cl-effect-2 a span::before {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 12px;
+	background: rgba(0,0,0,0.2);
+	content: attr(data-hover);
+	-webkit-transition: background 0.3s;
+	-moz-transition: background 0.3s;
+	transition: background 0.3s;
+	-webkit-transform: rotateX(-90deg);
+	-moz-transform: rotateX(-90deg);
+	transform: rotateX(-90deg);
+	-webkit-transform-origin: 50% 0;
+	-moz-transform-origin: 50% 0;
+	transform-origin: 50% 0;
+}
+
+.cl-effect-2 .btn10_span{
+	-webkit-transition: all ease 0.3s;
+	-moz-transition: all ease 0.3s;
+	 transition: all ease 0.3s;
+}
+
+.cl-effect-2 a:hover span,
+.cl-effect-2 a:focus span {
+	-webkit-transform: rotateX(90deg) translateY(-22px);
+	-moz-transform: rotateX(90deg) translateY(-22px);
+	transform: rotateX(90deg) translateY(-22px);
+}
+
+ .cl-effect-2 a:hover span::before,
+ .cl-effect-2 a:focus span::before {
+	background: inherit;	
+}
+
+
+/*-------- Effect 3: bottom line slides/fades in ---------*/
+
+.cl-effect-3 a {
+	padding: 8px 0;
+	line-height: 1em;
+	font-size:inherit;
+}
+
+.cl-effect-3 a .link_btm3 {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	/*height: 4px;*/
+	border:inherit;
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+	-moz-transition: opacity 0.5s, -moz-transform 0.5s;
+	transition: opacity 0.5s, transform 0.5s;
+	-webkit-transform: translateY(10px);
+	-moz-transform: translateY(10px);
+	transform: translateY(10px);
+}
+
+
+.cl-effect-3 a:hover .link_btm3{
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
+}
+.cl-effect-3 .btn10_span{
+	-webkit-transition: height 0.5s ease-out, opacity 0.5s ease-out, -webkit-transform 0.5s ease-out;
+	-moz-transition: height 0.5s ease-out, opacity 0.5s ease-out, -moz-transform 0.5s ease-out;
+	transition: height 0.5s ease-out, opacity 0.5s ease-out, transform 0.5s ease-out;
+	-webkit-transition: all ease-out 0.5s;
+	-moz-transition: all ease-out 0.5s;
+	transition: all ease-out 0.5s;
+}
+
+
+
+
+/*---- Effect 4: bottom border enlarge ---*/
+
+.cl-effect-4 a {
+	padding: 0 0 10px;
+	line-height: 1em;
+	font-size:inherit;
+}
+
+.cl-effect-4 a .link_btm4 {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	
+	border:inherit;
+	content: '';
+	opacity: 0;
+	-webkit-transition: height 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+	-moz-transition: height 0.5s, opacity 0.5s, -moz-transform 0.5s;
+	transition: height 0.5s, opacity 0.5s, transform 0.5s;
+	-webkit-transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+
+.cl-effect-4 a:hover .link_btm4{
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
+}
+
+.cl-effect-4 .btn10_span{
+	-webkit-transition: height 0.5s ease-out, opacity 0.5s ease-out, -webkit-transform 0.5s ease-out,all ease-in-out 0.5s;
+	-moz-transition: height 0.5s, opacity 0.5s, -moz-transform 0.5s ease-out,all ease-in-out 0.5s;
+	transition: height 0.5s, opacity 0.5s ease-out, transform 0.5s ease-out,all ease-in-out 0.5s;
+	/*-webkit-transition: all ease-in-out 0.5s;
+	-moz-transition: all ease-in-out 0.5s;
+	transition: all ease-in-out 0.5s;
+*/
+}
+
+
+/*---------- Effect 5: second border slides up -------*/
+
+
+.cl-effect-5 a {
+	/*padding: 12px 10px 10px;*/
+	padding: 12px 10px 10px;
+	color: #566473;
+	text-shadow: none;
+	font-weight: inherit;
+	height:100%;
+	line-height: 1em; 
+	font-size:inherit;
+}
+
+.cl-effect-5 a .link_top,
+.cl-effect-5 a .link_btm {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	/*height: 3px;
+	background: #566473;*/
+	border:inherit;
+	content: '';
+	-webkit-transition: -webkit-transform 0.3s;
+	-moz-transition: -moz-transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-transform: scale(0.85);
+	-moz-transform: scale(0.85);
+	transform: scale(0.85);
+}
+
+.cl-effect-5 a .link_btm {
+	opacity: 0;
+	-webkit-transition: top 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+	-moz-transition: top 0.3s, opacity 0.3s, -moz-transform 0.3s;
+	transition: top 0.3s, opacity 0.3s, transform 0.3s;
+}
+
+.cl-effect-5 a:hover .link_top,
+.cl-effect-5 a:hover .link_btm,
+.cl-effect-5 a:focus .link_top,
+.cl-effect-5 a:focus .link_btm {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	transform: scale(1);
+}
+
+.cl-effect-5 a:hover .link_btm,
+.cl-effect-5 a:focus .link_btm {
+	top: 0%;
+	opacity: 1;
+}
+.cl-effect-5 .btn10_span{
+	-webkit-transition: -webkit-transform 0.3s ease-out,all ease-in-out 0.3s;
+	-moz-transition: -moz-transform 0.3s ease-out,all ease-in-out 0.3s;
+	transition: transform 0.3s ease-out,all ease-in-out 0.3s;
+	/*-webkit-transition: all ease-in-out 0.5s;
+	-moz-transition: all ease-in-out 0.5s;
+	transition: all ease-in-out 0.5s;*/
+}
+
+/*---------- Effect 6: three circles----------- */
+
+.cl-effect-6 a {
+	-webkit-transition: color 0.3s;
+	-moz-transition: color 0.3s;
+	transition: color 0.3s;
+	line-height: 0.75em;
+}
+
+.cl-effect-6 a .btn6_link_top{
+	/*position: absolute;*/
+	display: block;
+	position: relative;
+	top: 90%;
+	left: 50%;
+	color: transparent;
+	content: '.';
+	text-shadow: 0 0 transparent;
+	font-size: 1em;
+	font-weight: inherit;
+	-webkit-transition: text-shadow 0.3s, color 0.3s;
+	-moz-transition: text-shadow 0.3s, color 0.3s;
+	transition: text-shadow 0.3s, color 0.3s;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	transform: translateX(-50%);
+	pointer-events: none;
+}
+
+.cl-effect-6 a:hover .btn6_link_top,
+.cl-effect-6 a:focus .btn6_link_top {
+	color: inherit;
+	/*text-shadow: 10px 0 red, -10px 0 red;*/
+}
+.cl-effect-6 a:hover,
+.cl-effect-6 a:focus {
+	color: #ba7700;
+}
+.cl-effect-6 .btn10_span{
+
+	-webkit-transition: color 0.3s ;
+	-moz-transition: color 0.3s ;
+	transition: color 0.3s ;
+	/*-webkit-transition: all ease .8s linear 0.3s;
+	-moz-transition: all ease .8s;
+	transition: all ease .8s;*/
+}
+
+/*--- Effect 7: border switch--- */
+
+.cl-effect-7 a {
+	padding: 0 20px;
+	height: inherit;
+	line-height: 1em;
+}
+
+.cl-effect-7 a .link_top,
+.cl-effect-7 a .link_btm {
+	position: absolute;
+	width: 45px;
+	height: 2px;
+	background: #fff;
+	content: '';
+	opacity: 0.2;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	pointer-events: none;
+}
+.cl-effect-7 .btn10_span{
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.cl-effect-7 a .btn7_link_top {
+	top: 0;
+	left: 0;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	transform: rotate(90deg);
+	-webkit-transform-origin: 0 0;
+	-moz-transform-origin: 0 0;
+	transform-origin: 0 0;
+}
+
+.cl-effect-7 a .btn7_link_btm {
+	right: 0;
+	bottom: 0;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	transform: rotate(90deg);
+	-webkit-transform-origin: 100% 0;
+	-moz-transform-origin: 100% 0;
+	transform-origin: 100% 0;
+}
+
+.cl-effect-7 a:hover .btn7_link_top,
+.cl-effect-7 a:hover .btn7_link_btm,
+.cl-effect-7 a:focus .btn7_link_top,
+.cl-effect-7 a:focus .btn7_link_btm {
+	opacity: 1;
+}
+
+.cl-effect-7 a:hover .btn7_link_top,
+.cl-effect-7 a:focus .btn7_link_top {
+	left: 50%;
+	-webkit-transform: rotate(0deg) translateX(-50%);
+	-moz-transform: rotate(0deg) translateX(-50%);
+	transform: rotate(0deg) translateX(-50%);
+}
+
+.cl-effect-7 a:hover .btn7_link_btm ,
+.cl-effect-7 a:focus .btn7_link_btm {
+	right: 50%;
+	-webkit-transform: rotate(0deg) translateX(50%);
+	-moz-transform: rotate(0deg) translateX(50%);
+	transform: rotate(0deg) translateX(50%);
+}
+
+/*---  Effect 8: border slight translate --- */
+
+.cl-effect-8 a {
+	padding: 10px 10px;
+	line-height: 1em;
+	
+}
+
+.cl-effect-8 a .btn8_link_top,
+.cl-effect-8 a .btn8_link_btm  {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	/*border: 3px solid #354856;*/
+	content: '';
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+}
+
+.cl-effect-8 .btn10_span{
+	-webkit-transition: -webkit-transform 0.3s ease-out,all ease 0.3s;
+	-moz-transition: -moz-transform 0.3s ease-out,all ease 0.3s;
+	transition: transform 0.3s ease-out,all ease 0.3s;
+	/*-webkit-transition: all ease .8s;
+-moz-transition: all ease .8s;
+transition: all ease .8s;*/
+}
+
+.cl-effect-8 a .btn8_link_btm  {
+	/*border-color: green;*/
+	opacity: 0;
+	-webkit-transform: translateY(-7px) translateX(6px);
+	-moz-transform: translateY(-7px) translateX(6px);
+	transform: translateY(-7px) translateX(6px);
+}
+
+.cl-effect-8 a:hover .btn8_link_top,
+.cl-effect-8 a:focus .btn8_link_top{
+	opacity: 0;
+	-webkit-transform: translateY(5px) translateX(-5px);
+	-moz-transform: translateY(5px) translateX(-5px);
+	transform: translateY(5px) translateX(-5px);
+}
+
+.cl-effect-8 a:hover .btn8_link_btm,
+.cl-effect-8 a:focus .btn8_link_btm  {
+	opacity: 1;
+	-webkit-transform: translateY(0px) translateX(0px);
+	-moz-transform: translateY(0px) translateX(0px);
+	transform: translateY(0px) translateX(0px);
+}
+
+
+/*----- Effect 9: cross on hover -------*/
+
+.cl-effect-9 {
+	position: relative;
+	z-index: 1;
+}
+
+.cl-effect-9 a {
+	padding: 0 5px;
+	line-height:1em;
+	color: #b4770d;
+	font-weight: 700;
+	-webkit-transition: color 0.3s;
+	-moz-transition: color 0.3s;
+	transition: color 0.3s;
+}
+.cl-effect-9 .btn10_span{
+	/*linear 0.3s;*/
+	-webkit-transition: color 0.2s ;
+	-moz-transition: color 0.2s ;
+	transition: color 0.2s ;
+	/*-webkit-transition: all ease .3s;
+	-moz-transition: all ease .3s;
+	transition: all ease .3s;*/
+}
+
+
+.cl-effect-9 a .btn9_link_top,
+.cl-effect-9 a .btn9_link_btm {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	/*top: 50%;*/
+	height: 2px;
+	margin-top: -1px;
+	background: #b4770d;
+	content: '';
+	z-index: -1;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	pointer-events: none;
+}
+
+.cl-effect-9 a .btn9_link_top {
+	-webkit-transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+
+.cl-effect-9 a .btn9_link_btm {
+	-webkit-transform: translateY(10px);
+	-moz-transform: translateY(10px);
+	transform: translateY(10px);
+}
+
+.cl-effect-9 a:hover,
+.cl-effect-9 a:focus {
+	color: #fff;
+}
+
+.cl-effect-9 a:hover .btn9_link_btm,
+.cl-effect-9 a:hover .btn9_link_btm,
+.cl-effect-9 a:focus .btn9_link_top,
+.cl-effect-9 a:focus .btn9_link_top{
+	opacity: 0.7;
+}
+
+.cl-effect-9 a:hover .btn9_link_top,
+.cl-effect-9 a:focus .btn9_link_top {
+	top: 50%;
+	
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	transform: rotate(45deg) ;
+}
+
+.cl-effect-9 a:hover .btn9_link_btm,
+.cl-effect-9 a:focus .btn9_link_btm {
+	top: 50%;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+
+	
+}
+
+
+/*------- Effect 10: 3D side --------- */
+
+.cl-effect-10 a {
+	line-height: 2em;
+	-webkit-perspective: 800px;
+	-moz-perspective: 800px;
+	perspective: 800px;
+}
+
+.cl-effect-10 a span.btn10_span {
+	position: relative;
+	display: inline-block;
+	padding: 3px 15px 0;
+	background: #587285;
+	/*box-shadow: inset 0 3px #2f4351;*/
+	border-top:inherit;
+	-webkit-transition: background 0.6s;
+	-moz-transition: background 0.6s;
+	transition: background 0.6s;
+	-webkit-transform-origin: 50% 0;
+	-moz-transform-origin: 50% 0;
+	transform-origin: 50% 0;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform-origin: 0% 50%;
+	-moz-transform-origin: 0% 50%;
+	transform-origin: 0% 50%;
+}
+
+.cl-effect-10 a span.btn10_link_top {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: gray;
+	color: #2f4351;
+	/*content: attr(data-hover);*/
+	
+	-webkit-transform: rotateX(270deg);
+	-moz-transform: rotateX(270deg);
+	transform: rotateX(270deg);
+	-webkit-transition: -webkit-transform 0.6s;
+	-moz-transition: -moz-transform 0.6s;
+	transition: transform 0.6s;
+	-webkit-transform-origin: 0 0;
+	-moz-transform-origin: 0 0;
+	transform-origin: 0 0;
+	pointer-events: none;
+}
+
+.cl-effect-10 a:hover span.btn10_span,
+.cl-effect-10 a:focus span.btn10_span {
+	/*background: inherit;
+	border-top:2px solid transparent;*/
+}
+
+.cl-effect-10 a:hover span.btn10_link_top,
+.cl-effect-10 a:focus span.btn10_link_top {
+	-webkit-transform: rotateX(10deg);	
+	-moz-transform: rotateX(10deg);
+	transform: rotateX(10deg);
+}
+
+/*-------- Effect 11: reveal, push out -----*/
+.cl-effect-11  {
+	position: relative;
+	z-index: 1;
+}
+
+.cl-effect-11 a {
+	overflow: hidden;
+	/*margin: 0 15px;
+*/
+}
+
+.cl-effect-11 a span.btn10_span {
+	display: block;
+	padding: 20px 20px;
+	background: #0f7c67;
+	-webkit-transition: -webkit-transform 0.3s;
+	-moz-transition: -moz-transform 0.3s;
+	transition: transform 0.3s;
+}
+
+.cl-effect-11 a .btn11_link_top {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	padding: 20px 20px;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	color: #0f7c67;
+	content: attr(data-hover);
+	-webkit-transition: -webkit-transform 0.3s;
+	-moz-transition: -moz-transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-transform: translateX(-25%);
+}
+
+.cl-effect-11 a:hover span.btn10_span,
+.cl-effect-11 a:focus span.btn10_span {
+	-webkit-transform: translateX(100%);
+	-moz-transform: translateX(100%);
+	transform: translateX(100%);
+}
+
+.cl-effect-11 a:hover .btn11_link_top,
+.cl-effect-11 a:focus .btn11_link_top {
+	-webkit-transform: translateX(0%);
+	-moz-transform: translateX(0%);
+	transform: translateX(0%);
+}
+
+
+

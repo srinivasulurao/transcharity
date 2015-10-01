@@ -1,0 +1,1 @@
+[19-Sep-2015 08:55:24 UTC] PHP Fatal error:  Call to undefined function post_password_required() in /home/transcharity/public_html/wp-content/themes/javo-directory/comments.php on line 15
